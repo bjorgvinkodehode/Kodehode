@@ -1,0 +1,167 @@
+:root {
+  --clr-background: linear-gradient(
+    to right bottom,
+    #212121,
+    #212121,
+    #202121,
+    #1f2120,
+    #20211f
+  );
+
+}
+
+*,  
+::before,
+::after{
+  box-sizing: border-box;
+
+
+}
+html, body {
+  height: 100%;
+  
+}
+
+
+body {
+  font-family: system-ui;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  
+}
+body {
+  background-image: var(--clr-background),url(background/alien1.jpg);
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: center;
+  
+}
+#logo {
+  max-height: 100px;
+  opacity: 70%;
+  border: solid black 0px;
+  border-radius: 5px;
+}
+/* styling and aligning on the header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/* button styling */
+button {
+  background-color: rgb(73, 73, 73, 0.01);
+  background-blend-mode: overlay;
+  color: rgb(216, 216, 216);
+  padding: 20px;
+  border-radius: 5px;
+  border: solid black 0px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: background .5s ease;
+}
+/* button styling on hover */
+button:hover {
+  background: #232623;
+  
+}
+
+#container {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#container p {
+  max-width: 900px;
+} 
+/* text color */
+p{
+  color: antiquewhite;
+}
+/* styling for the posters */
+#posters{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+
+#posters2{
+  margin-top: 20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* a way to place the password box in the center, not sure why but without this all the elements from the header were also in the flexbox 
+need to figure out why*/
+.placement{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  position: relative;
+}
+
+/* styling on the password elements */
+.passwordbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--clr-background);
+  border: #212121 solid 2px;
+  border-radius: 10px;
+  width: 250px;
+  height: 300px;
+  text-align:center;
+  color:  rgb(216, 216, 216); 
+  font-size: small;
+  }
+/* animation for the fadin on the login information */
+  .passwordbox::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    background-color: #212121;
+    border-radius: 10px;
+    animation: fade 5s forwards;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      z-index: -1;
+      opacity: 0;
+    }
+  }
+  
+
+
+
+
+/* :root{
+  --crl-1:#d16ba5;
+  --crl-2:#c777b9;
+  --crl-3:#aa8fd8;
+  --crl-4:#8aa7ec;
+  --crl-5:#69bff8;
+} */
+
+
